@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.box-art {
+  height: 300px;
+  width: 200px;
+  box-shadow: 10px 10px 10px darkgrey;
+}
+
+.sectionBlack {
+  background-color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+}
+
+.sectionWhite {
+  background-color: rgb(241, 232, 232);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+}
+
+/* .title {
+  display: inline-block;
+} */
+
+h3 {
+  text-align: center;
+}
+
+.h3text {
+  color: rgb(194, 136, 65);
+}
