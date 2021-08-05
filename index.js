@@ -21,3 +21,5 @@ boxArtWhite.forEach(item => item.addEventListener('mouseover', function(){
 boxArtWhite.forEach(item => item.addEventListener('mouseout', function(){
     item.style.boxShadow = '';
 }))
+ 
+// asjdlfkjs;af
