@@ -22,3 +22,22 @@ boxArtWhite.forEach(item => item.addEventListener('mouseout', function(){
     item.style.boxShadow = '';
 }))
  
+fetch("https://swapi.py4e.com/api/films/")
+.then(response => response.json())
+.then(data => {
+    const allFilms = data.results
+    allFilms.pop()
+    allFilms.forEach(elem => console.log(elem.title))
+
+    renderDirector(allFilms)
+})
+
+function renderDirector(info) {
+    
+    info.forEach(info => {
+        const director = document.createElement('p')
+        director.innerHTML = info.director;
+        sections.append('director')
+    })
+
+}
