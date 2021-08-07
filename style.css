@@ -2,6 +2,13 @@
   padding: 0;
   margin: 0;
 }
+
+.intro {
+  height: 100vh;
+  background-image: url(https://www.teahub.io/photos/full/92-928454_star-wars-white-background.jpg);
+  background-attachment: fixed;
+}
+
 img {
   margin-top: 60px;
   height: auto;
@@ -39,4 +46,14 @@ h3 {
 
 .h3text {
   color: rgb(194, 136, 65);
+}
+
+button {
+  padding: 5px;
+  font-size: large;
+}
+
+.buttons {
+  margin-left: 45px;
+  margin-top: 13px;
 }

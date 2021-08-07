@@ -2,6 +2,11 @@ const sections = document.querySelector('section')
 const boxArt = document.querySelectorAll('.box-art')
 const boxArtWhite = document.querySelectorAll('.box-art-white')
 const sectionWhite = document.querySelector('.sectionWhite')
+const likeButtons = document.querySelectorAll('.likeButton')
+const dislikeButtons = document.querySelectorAll('.dislikeButton')
+
+
+// Boxart Shadow Effects
 
 boxArt.forEach(item => item.addEventListener('mouseover', function(){
     
@@ -23,6 +28,20 @@ boxArtWhite.forEach(item => item.addEventListener('mouseover', function(){
 boxArtWhite.forEach(item => item.addEventListener('mouseout', function(){
     item.style.boxShadow = '';
 }))
+
+// Like and Dislike Buttons
+
+likeButtons.forEach(item => item.addEventListener('click', function(){
+    item.style.backgroundColor = "blue"
+}))
+dislikeButtons.forEach(item => item.addEventListener('click', function(){
+    item.style.backgroundColor = "red"
+}))
+
+
+
+
+
  
 fetch("https://swapi.py4e.com/api/films/")
 .then(response => response.json())
