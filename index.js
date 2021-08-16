@@ -4,6 +4,19 @@ const boxArtWhite = document.querySelectorAll('.box-art-white')
 const sectionWhite = document.querySelector('.sectionWhite')
 const likeButtons = document.querySelectorAll('.likeButton')
 const dislikeButtons = document.querySelectorAll('.dislikeButton')
+const button1 = document.querySelector('.buttons1')
+const button2 = document.querySelector('.buttons2')
+const button3 = document.querySelector('.buttons3')
+const button4 = document.querySelector('.buttons4')
+const button5 = document.querySelector('.buttons5')
+const button6 = document.querySelector('.buttons6')
+const crawl1 = document.querySelector('#crawlPhantom')
+const crawl2 = document.querySelector('#crawlClones')
+const crawl3 = document.querySelector('#crawlSith')
+const crawl4 = document.querySelector('#crawlHope')
+const crawl5 = document.querySelector('#crawlEmpire')
+const crawl6 = document.querySelector('#crawlJedi')
+
 
 
 // Boxart Shadow Effects
@@ -33,34 +46,74 @@ boxArtWhite.forEach(item => item.addEventListener('mouseout', function(){
 
 likeButtons.forEach(item => item.addEventListener('click', function(){
     item.style.backgroundColor = "blue"
+
+    
+    
 }))
-dislikeButtons.forEach(item => item.addEventListener('click', function(){
-    item.style.backgroundColor = "red"
-}))
+
+
 
 
 
 
 
  
-fetch("https://swapi.py4e.com/api/films/")
+fetch("https://swapi.py4e.com/api/films/1")
 .then(response => response.json())
 .then(data => {
-    const allFilms = data.results
-    allFilms.pop()
-    allFilms.forEach(elem => console.log(elem.title))
-
-    function renderDirector(info) {
-    
-    info.forEach(info => {
-        
-        const dir = document.querySelector('.director')
-        dir.innerHTML = info.director;
-        sections.append(dir)
-        
-    })
-
-}
-    renderDirector(allFilms)
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl4.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
 })
 
+fetch("https://swapi.py4e.com/api/films/2")
+.then(response => response.json())
+.then(data => {
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl5.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
+})
+
+fetch("https://swapi.py4e.com/api/films/3")
+.then(response => response.json())
+.then(data => {
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl6.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
+})
+
+fetch("https://swapi.py4e.com/api/films/4")
+.then(response => response.json())
+.then(data => {
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl1.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
+})
+
+fetch("https://swapi.py4e.com/api/films/5")
+.then(response => response.json())
+.then(data => {
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl2.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
+})
+
+fetch("https://swapi.py4e.com/api/films/6")
+.then(response => response.json())
+.then(data => {
+    const crawl = data.opening_crawl
+    function renderCrawl(info) {
+        crawl3.innerText = info.opening_crawl;
+        }
+    renderCrawl(data)
+})
