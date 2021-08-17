@@ -51,69 +51,110 @@ likeButtons.forEach(item => item.addEventListener('click', function(){
     
 }))
 
+fetch('https://swapi.py4e.com/api/films/')
+.then(response => response.json())
+.then(data => {
+    const films = data.results
+    films.forEach(crawlToDom)
+    console.log(films)
+})
+
+function crawlToDom (films) {
+    
+    crawl1.innerHTML = films.title
+}
+
+// fetch('https://swapi.py4e.com/api/films/')
+// .then(response => response.json())
+// .then(data => {
+//     console.log(data.results)
+//     for(const elem of data.results){
+//         console.log(elem)
+//         crawl4.innerText = elem.opening_crawl
+//         crawl5.innerText = data.results[1].opening_crawl
+//         crawl6.innerText = data.results[2].opening_crawl
+//         crawl1.innerText = data.results[3].opening_crawl
+//         crawl2.innerText = data.results[4].opening_crawl
+//         crawl3.innerText = data.results[5].opening_crawl
+        
+//     }
+// })
 
 
-
+// fetch("https://swapi.py4e.com/api/films/")
+// .then(response => response.json())
+// .then(data => {
+    
+//     const crawl = data.results
+//     console.log(crawl)
+//     function renderCrawl(info) {
+//         crawl4.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data.results)
+// })
 
 
 
  
-fetch("https://swapi.py4e.com/api/films/1")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl4.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
+// fetch("https://swapi.py4e.com/api/films/1")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     console.log(crawl)
+//     function renderCrawl(info) {
+//         crawl4.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
 
-fetch("https://swapi.py4e.com/api/films/2")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl5.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
 
-fetch("https://swapi.py4e.com/api/films/3")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl6.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
 
-fetch("https://swapi.py4e.com/api/films/4")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl1.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
+// fetch("https://swapi.py4e.com/api/films/2")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     function renderCrawl(info) {
+//         crawl5.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
 
-fetch("https://swapi.py4e.com/api/films/5")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl2.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
+// fetch("https://swapi.py4e.com/api/films/3")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     function renderCrawl(info) {
+//         crawl6.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
 
-fetch("https://swapi.py4e.com/api/films/6")
-.then(response => response.json())
-.then(data => {
-    const crawl = data.opening_crawl
-    function renderCrawl(info) {
-        crawl3.innerText = info.opening_crawl;
-        }
-    renderCrawl(data)
-})
+// fetch("https://swapi.py4e.com/api/films/4")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     function renderCrawl(info) {
+//         crawl1.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
+
+// fetch("https://swapi.py4e.com/api/films/5")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     function renderCrawl(info) {
+//         crawl2.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
+
+// fetch("https://swapi.py4e.com/api/films/6")
+// .then(response => response.json())
+// .then(data => {
+//     const crawl = data.opening_crawl
+//     function renderCrawl(info) {
+//         crawl3.innerText = info.opening_crawl;
+//         }
+//     renderCrawl(data)
+// })
