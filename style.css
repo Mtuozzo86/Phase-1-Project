@@ -8,32 +8,19 @@ html {
 }
 
 /* intro */
-a {
-  color: black;
-  text-decoration: none;
+
+.flexbox-item {
+  width: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90px;
+  font-weight: bolder;
+  margin: 35px;
+  text-align: center;
+  cursor: default;
   border-style: solid;
   border-width: thick;
   border-radius: 15%;
   padding: 20px;
-}
-a:visited {
-  color: black;
-  text-decoration: none;
-}
-
-.flexbox-item1,
-.flexbox-item2,
-.flexbox-item3,
-.flexbox-item4,
-.flexbox-item5,
-.flexbox-item6 {
-  width: 70px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100px;
-  font-weight: bolder;
-  margin: 50px;
-  text-align: center;
-  padding: 10px;
 }
 
 .flexbox-container {
@@ -45,14 +32,17 @@ a:visited {
   height: 100vh;
   background-image: url(https://www.teahub.io/photos/full/92-928454_star-wars-white-background.jpg);
   background-attachment: fixed;
-  /* display: flex; */
 }
 
 img {
   margin-top: 60px;
   height: auto;
   width: 15%;
+  display: absolute;
+  padding-left: 30px;
+  display: inline-block;
 }
+
 .box-art {
   box-shadow: 5px 5px 10px 2px rgb(179, 161, 161);
 }
@@ -69,44 +59,40 @@ img {
 
 .sectionWhite {
   background-color: rgb(255, 255, 255);
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 50px;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  position: relative;
   height: 65vh;
   border-top: 1px solid black;
 }
 
-h3 {
-  text-align: center;
+.films {
+  position: relative;
 }
 
-#crawlPhantom,
-#crawlClones,
-#crawlSith,
-#crawlHope,
-#crawlEmpire,
-#crawlJedi {
+.h3 {
   text-align: center;
   position: absolute;
-  left: 600px;
-  margin-top: 100px;
-  width: 25%;
+  top: 5px;
+  width: 100%;
+}
+
+.crawl {
+  text-align: center;
+  margin-top: 90px;
+  position: absolute;
+  margin-left: 340px;
+  display: inline-block;
+  /* width: 100%; */
 }
 
 .h3text {
   color: rgb(194, 136, 65);
 }
 
-.buttons1,
-.buttons2,
-.buttons3,
-.buttons4,
-.buttons5,
-.buttons6 {
-  margin-left: 55px;
-  margin-top: 17px;
-}
-
 .likeButton {
   padding: 0px 30px 0px 30px;
+  margin-left: 80px;
+  margin-top: 17px;
+  display: block;
 }

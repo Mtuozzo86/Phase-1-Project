@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Star Wars</title>
+</head>
+<body>
+    <section class="intro">
+        <div class="flexbox-container">
+            <div class="flexbox-item1"><a href="#phantom">I</a></div>
+            <div class="flexbox-item2"><a href="#clones">II</a></div>
+            <div class="flexbox-item3"><a href="#sith">III</a></div>
+        </div>    
+        <div class="flexbox-container">
+            <div class="flexbox-item4"><a href="#hope">IV</a></div>
+            <div class="flexbox-item5"><a href="#empire">V</a></div>
+            <div class="flexbox-item6"><a href="#jedi">VI</a></div>
+        </div>
+            
+            
+        
+            
+        
+
+    </section>
+    <div class = "films">
+    <section class="sectionWhite">
+        <h3 id="phantom">The Phantom Menace</h3>
+        <p id="crawlPhantom"></p>
+        <img class="box-art-white" src="https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" alt="Phantom Menace">
+        
+        <div class="buttons1">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+        
+    </section>
+
+    <section class="sectionBlack">
+        <h3 id ="clones"class="h3text">Attack of the Clones</h3>
+        <p id="crawlClones"></p>
+        <img class="box-art" src="https://m.media-amazon.com/images/I/61zAkpvYLqL._AC_SY741_.jpg" alt="Attack of the Clones">
+        <div class="buttons2">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+    </section>
+
+    <section class="sectionWhite">
+        <h3 id="sith">Revenge of the Sith</h3>
+        <p id="crawlSith"></p>
+        <img class="box-art-white" src="https://m.media-amazon.com/images/I/61ZDSUH2iiL._AC_.jpg" alt="Revenge of the Sith">
+        <div class="buttons3">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+    </section>
+
+    <section class="sectionBlack">
+        <h3 id="hope" class="h3text">A New Hope</h3>
+        <p id="crawlHope"></p>
+        <img class="box-art" src="https://m.media-amazon.com/images/I/A1wnJQFI82L._AC_SY879_.jpg" alt="A New Hope">
+        <div class="buttons4">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+    </section>
+    
+    <section class="sectionWhite">
+        <h3 id="empire">The Empire Strikes Back</h3>
+        <p id="crawlEmpire"></p>
+        <img class="box-art-white" src="https://m.media-amazon.com/images/I/814Cbv8EftL._AC_.jpg" alt="Empire Strikes Back">
+        <div class="buttons5">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+    </section>
+    
+    <section class="sectionBlack">
+        <h3 id ="jedi" class="h3text">Return of the Jedi</h3>
+        <p id="crawlJedi"></p>
+        <img class="box-art" src="https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg" alt="Return of the Jedi">
+        <div class="buttons6">
+            <button class = "likeButton">Like</button>
+            
+        </div>
+    </section>
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
+
