@@ -33,7 +33,7 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
             // alliance.innerHTML =`<img class="popup" src="${data.image}">`
             // secretWindow.append(alliance)
             
-            
+            //test
         })
     }
 
