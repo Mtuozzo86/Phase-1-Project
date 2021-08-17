@@ -1,5 +1,5 @@
 const episodeNumerals = document.querySelectorAll('.flexbox-item')
-console.log(coverArt)
+
 // Box Shadow Effects
 
 episodeNumerals.forEach(item => item.addEventListener('mouseover', function(){
@@ -14,6 +14,36 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
 }))
 
 
+    const secretWindow = document.querySelector('.popup')
+    const light = document.querySelector('#lightBtn')
+    const dark = document.querySelector('#darkBtn')
+
+    light.addEventListener('click', chooseLight)
+    dark.addEventListener('click', chooseDark)
+
+    function chooseLight(){
+        fetch("http://localhost:3000/coverArt/7")
+        .then(resp => resp.json())
+        .then(data => {
+
+            secretWindow.innerHTML = `<img src="${data.image}">`
+            secretWindow.className = "popup"
+            
+            
+        })
+    }
+
+    function chooseDark(){
+        fetch("http://localhost:3000/coverArt/8")
+        .then(resp => resp.json())
+        .then(data => {
+            secretWindow.innerHTML = `<img src="${data.image}">`
+            secretWindow.className = "popup"
+        })
+    }
+
+
+
 
 // Fetch
 fetch('https://swapi.py4e.com/api/films/')
@@ -26,20 +56,21 @@ fetch('https://swapi.py4e.com/api/films/')
 fetch("http://localhost:3000/coverArt")
 .then(response => response.json())
 .then(data => {
-    data.forEach(artwork)
-
-    const numberI = document.querySelector('.number')
-numberI.addEventListener('click', popUpWindow)
-function popUpWindow({image}){
-    const window = document.createElement('img')
-    const popWindow = document.querySelector('.popup')
-    window.className = 'popup'
-    window.src = image
-
-    popWindow.append(window)
-}
+    const images = data.slice(0,6)
+    images.forEach(artwork)
+    
+    
 
 })
+const submitButton = document.querySelector('form')
+submitButton.addEventListener('submit', function(e){
+    e.preventDefault()
+
+})
+
+
+
+
 
 function artwork({image}){
     const pictures = document.createElement('img')
