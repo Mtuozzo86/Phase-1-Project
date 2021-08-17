@@ -25,9 +25,13 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
         fetch("http://localhost:3000/coverArt/7")
         .then(resp => resp.json())
         .then(data => {
+            const alliance = document.createElement('div')
+            alliance.className = "popup"
+            secretWindow.innerHTML = ""
 
-            secretWindow.innerHTML = `<img src="${data.image}">`
-            secretWindow.className = "popup"
+            alliance.innerHTML = `<img class="popup" src="${data.image}">`
+            // alliance.innerHTML =`<img class="popup" src="${data.image}">`
+            // secretWindow.append(alliance)
             
             
         })
@@ -37,8 +41,9 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
         fetch("http://localhost:3000/coverArt/8")
         .then(resp => resp.json())
         .then(data => {
-            secretWindow.innerHTML = `<img src="${data.image}">`
-            secretWindow.className = "popup"
+            
+            secretWindow.innerHTML = `<img class="popup" src="${data.image}">`
+            
         })
     }
 
@@ -77,7 +82,7 @@ function artwork({image}){
     const container = document.querySelector('.films')
     const sections = document.querySelector('section')
     
-    pictures.className = 'img'
+    pictures.className = 'box-covers'
     pictures.src = image
 
     container.append(sections)
