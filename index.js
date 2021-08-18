@@ -1,5 +1,5 @@
 const episodeNumerals = document.querySelectorAll('.flexbox-item')
-
+console.log(coverArt)
 // Box Shadow Effects
 
 episodeNumerals.forEach(item => item.addEventListener('mouseover', function(){
@@ -21,10 +21,26 @@ fetch('https://swapi.py4e.com/api/films/')
 .then(data => {
     const films = data.results.slice(0,6)
     films.forEach(crawlToDom)
-    films.forEach(artwork)
-    
-    
 })
+
+fetch("http://localhost:3000/coverArt")
+.then(response => response.json())
+.then(data => {
+    data.forEach(artwork)
+
+    const numberI = document.querySelector('.number')
+numberI.addEventListener('click', popUpWindow)
+function popUpWindow({image}){
+    const window = document.createElement('img')
+    const popWindow = document.querySelector('.popup')
+    window.className = 'popup'
+    window.src = image
+
+    popWindow.append(window)
+}
+
+})
+
 function artwork({image}){
     const pictures = document.createElement('img')
     const container = document.querySelector('.films')
@@ -36,8 +52,8 @@ function artwork({image}){
     container.append(sections)
     sections.append(pictures)
     
-    
 }
+
 
 function crawlToDom ({opening_crawl, title}) {
    
