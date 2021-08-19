@@ -13,7 +13,7 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
     item.style.boxShadow = '';
 }))
 
-
+    
     const secretWindow = document.querySelector('.popup')
     const light = document.querySelector('#lightBtn')
     const dark = document.querySelector('#darkBtn')
@@ -25,15 +25,7 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
         fetch("http://localhost:3000/coverArt/7")
         .then(resp => resp.json())
         .then(data => {
-            const alliance = document.createElement('div')
-            alliance.className = "popup"
-            secretWindow.innerHTML = ""
-
-            alliance.innerHTML = `<img class="popup" src="${data.image}">`
-            // alliance.innerHTML =`<img class="popup" src="${data.image}">`
-            // secretWindow.append(alliance)
-            
-            //test
+            secretWindow.innerHTML = `<img class="alliance" src="${data.image}">`
         })
     }
 
@@ -41,9 +33,7 @@ episodeNumerals.forEach(item => item.addEventListener('mouseout', function(){
         fetch("http://localhost:3000/coverArt/8")
         .then(resp => resp.json())
         .then(data => {
-            
-            secretWindow.innerHTML = `<img class="popup" src="${data.image}">`
-            
+            secretWindow.innerHTML = `<img class="alliance" src="${data.image}">`
         })
     }
 
@@ -74,9 +64,6 @@ submitButton.addEventListener('submit', function(e){
 })
 
 
-
-
-
 function artwork({image}){
     const pictures = document.createElement('img')
     const container = document.querySelector('.films')
@@ -93,7 +80,6 @@ function artwork({image}){
 
 function crawlToDom ({opening_crawl, title}) {
    
-    
     const container = document.querySelector('.films')
     
     const sections = document.createElement('section')

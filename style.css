@@ -34,23 +34,27 @@ html {
   background-attachment: fixed;
 }
 
-.popup,
-.logo {
+.popup {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
+  border-radius: 100%;
   width: 300px;
   height: 300px;
-  /* position: relative; */
+  position: relative;
   margin-left: 60px;
+  padding-bottom: 10px;
   /* top: 100px; */
 }
 
 .answer {
-  font-size: larger;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
-
+.alliance {
+  width: 300px;
+  height: 300px;
+}
 button {
   background-color: rgb(175, 174, 174);
   padding: 10px 20px;
